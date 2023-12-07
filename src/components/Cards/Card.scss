@@ -1,5 +1,38 @@
 .card_container{
   background-color: black;
   margin: 1rem;
-  margin-top: 75px;
+  margin-top: 50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  .card_container_header{
+  padding: 0;
+    .card_container_header_img{
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .card_container_header_row{
+        display: grid;
+      grid-template-columns: auto auto;
+      text-align: center;
+      margin-bottom: 5px;
+      .card_container_header_row_title{
+        color: white;
+        font-size: 1.5rem;
+      }
+      .card_container_header_row_date{
+        color: white;
+        margin: auto;
+      }
+    }
+
+  }
+
 }

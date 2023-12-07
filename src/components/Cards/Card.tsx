@@ -15,13 +15,16 @@ const Card: React.FC<CardProps> = ({ title,imageUrl, date, content }) => {
        <>
            <IonCard className="card_container">
 
-               <IonCardHeader>
-                   <img src={imageUrl} alt="Image du film"/>
-                   <IonCardTitle>{title}</IonCardTitle>
-                   {date && <IonCardSubtitle>{date}</IonCardSubtitle>}
+               <IonCardHeader className="card_container_header">
+                   <img className={"card_container_header_img"} src={imageUrl} alt="Image du film"/>
+                   <div className={"card_container_header_row"}>
+                       <IonCardTitle className={"card_container_header_row_title"}>{title}</IonCardTitle>
+                       <IonCardSubtitle className={"card_container_header_row_date"}>{date}</IonCardSubtitle>
+                   </div>
+
                </IonCardHeader>
 
-               <IonCardContent>
+               <IonCardContent className={"card_container_content"}>
                    {content}
                </IonCardContent>
            </IonCard>
