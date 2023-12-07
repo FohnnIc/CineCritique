@@ -1,0 +1,7 @@
+{
+  "name": "CineCritique",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
