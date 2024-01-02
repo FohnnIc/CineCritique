@@ -1,4 +1,4 @@
-import {IonContent, IonHeader, IonLoading, IonPage, IonTitle, IonToolbar} from '@ionic/react';
+import {IonContent, IonLoading, IonPage, } from '@ionic/react';
 import Card from "../../components/Cards/Card";
 import React, {useEffect, useState} from "react";
 
@@ -35,7 +35,7 @@ const Film: React.FC = () => {
             }
         };
         fetchFilms();
-        console.log(films);
+       // console.log(films);
     }, []);
 
 
@@ -45,6 +45,7 @@ const Film: React.FC = () => {
                 <IonLoading isOpen={loading} message="Chargement des films..." />
                 {films.map((film: any) => (
                     <Card
+                        isFilm={true}
                         id={film.id}
                         key={film.id}
                         score={film.vote_average}

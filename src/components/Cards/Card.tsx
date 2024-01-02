@@ -8,13 +8,14 @@ content: string ;
 imageUrl: string;
 score: number;
 id: number;
+isFilm: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ id, title,imageUrl, score, date, content }) => {
+const Card: React.FC<CardProps> = ({ id,isFilm, title,imageUrl, score, date, content }) => {
 
     return (
 
-        <IonRouterLink href={`/film/${id}`}>
+        <IonRouterLink href={`/${isFilm?'film':'tv'}/${id}`}>
            <IonCard className="card_container">
                <IonCardHeader className="card_container_header">
                    <div className={"card_container_header_score"}>{Math.round(score * 10) / 10}/10</div>

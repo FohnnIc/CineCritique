@@ -7,7 +7,7 @@ const Header: React.FC<HeaderProps> = () => {
     return (
         <IonHeader>
             <IonToolbar>
-                <IonTitle>CinéCritique</IonTitle>
+                <IonTitle><h1>CinéCritique</h1></IonTitle>
             </IonToolbar>
         </IonHeader>
     );

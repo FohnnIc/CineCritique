@@ -24,7 +24,8 @@ import './theme/variables.css';
 import Film from "./pages/film/Film";
 import Serie from "./pages/serie/Serie";
 import React from "react";
-
+import FilmDetails from "./pages/filmDetails/FilmDetails";
+import SerieDetails from "./pages/serieDetails/SerieDetails";
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -41,9 +42,16 @@ const App: React.FC = () => (
         <Route exact path="/serie">
           <Serie />
         </Route>
+        <Route exact path="/film/:id">
+          <FilmDetails />
+        </Route>
+        <Route exact path="/tv/:id">
+          <SerieDetails/>
+        </Route>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
+
 
       </IonRouterOutlet>
     </IonReactRouter>
