@@ -26,6 +26,7 @@ import Serie from "./pages/serie/Serie";
 import React from "react";
 import FilmDetails from "./pages/filmDetails/FilmDetails";
 import SerieDetails from "./pages/serieDetails/SerieDetails";
+import MaListe from "./pages/maListe/MaListe";
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -47,6 +48,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/tv/:id">
           <SerieDetails/>
+        </Route>
+        <Route exact path="/list">
+          <MaListe/>
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

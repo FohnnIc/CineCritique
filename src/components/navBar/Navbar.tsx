@@ -17,6 +17,9 @@ const NavBar: React.FC<ContainerProps> = () => {
                         <IonButton>
                             <IonRouterLink routerLink="/home">Accueil</IonRouterLink>
                         </IonButton>
+                        <IonButton>
+                            <IonRouterLink routerLink="/list">Mes Listes</IonRouterLink>
+                        </IonButton>
                     </IonButtons>
                 </IonToolbar>
             </IonHeader>

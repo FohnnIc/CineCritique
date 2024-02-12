@@ -1,0 +1,23 @@
+.card_addPlaylist{
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  background-color: black;
+  color: white;
+  border: solid 2px white;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius:100px;
+  left: 300px;
+  top: 100px;
+  z-index: 1;
+
+}
+.card_modal{
+  margin-top: 60px;
+}

@@ -46,28 +46,26 @@ const DetailsContent: React.FC<DetailsContentProps> = ({ title,duree, isFilm,des
                     <IonCardTitle>{title}</IonCardTitle>
                 </IonCardHeader>
 
-                <IonCardContent>
-                    <IonList>
+                <IonCardContent >
+                    <IonList >
                         <img src={`https://image.tmdb.org/t/p/w500/${img}`} alt={"image du film"}/>
-
-                        <IonItem>
+                        <IonItem className={"ionList_list"}>
                             <IonIcon icon={videocamOutline} slot="start"/>
                             <IonLabel>Titre: {title}</IonLabel>
                         </IonItem>
 
-                        <IonItem>
+                        <IonItem className={"ionList_list"}>
                             <IonIcon icon={calendarOutline} slot="start"/>
-                            <IonLabel>Année de sortie: {year}</IonLabel>
+                            <IonLabel> {year}</IonLabel>
                         </IonItem>
 
-                        <IonItem>
+                        <IonItem className={"ionList_list"}>
                             <IonIcon icon={ribbonOutline} slot="start"/>
-                            <IonLabel>Note : {note} /10</IonLabel>
+                            <IonLabel> {note} /10</IonLabel>
                         </IonItem>
 
-                        <IonItem>
+                        <IonItem className={"ionList_list"}>
                             <IonIcon icon={extensionPuzzleOutline} slot="start"/>
-                            <IonLabel>Genres:</IonLabel>
                             {genres.map((genre, index) => (
                                 <IonLabel key={index} style={{marginLeft: '8px'}}>
                                     {genre.name}
@@ -76,7 +74,7 @@ const DetailsContent: React.FC<DetailsContentProps> = ({ title,duree, isFilm,des
                         </IonItem>
                         {isFilm ?
 
-                            <IonItem>
+                            <IonItem className={"ionList_list"}>
                                 <IonIcon icon={cashOutline} slot="start"/>
                                 <IonLabel>Production: {budget} $</IonLabel>
                                 <IonLabel>Revenue: {revenue} $</IonLabel>
@@ -85,26 +83,23 @@ const DetailsContent: React.FC<DetailsContentProps> = ({ title,duree, isFilm,des
                             : null}
                         {isFilm ?
 
-                            <IonItem>
+                            <IonItem className={"ionList_list"}>
                                 <IonIcon icon={timeOutline} slot="start"/>
-                                <IonLabel>Durée: {duree} minutes</IonLabel>
+                                <IonLabel> {duree} minutes</IonLabel>
                             </IonItem>
                             :
-                            <IonItem>
+                            <IonItem className={"ionList_list"}>
                                 <IonIcon icon={timeOutline} slot="start"/>
-                                <IonLabel>Nombre de saisons: {duree} </IonLabel>
+                                <IonLabel> {duree} saisons</IonLabel>
                             </IonItem>
                         }
 
-
-
-                        <IonItem>
+                        <IonItem className={"ionList_list"}>
                             <IonIcon icon={readerOutline} slot="start"/>
-                            <IonLabel>Description: {description} </IonLabel>
+                            <IonLabel>{description} </IonLabel>
                         </IonItem>
                         <br></br>
                         <br></br>
-
 
                     </IonList>
                 </IonCardContent>
